@@ -50,3 +50,39 @@ def decode_sentence(sentence)
   decoded_words = words.map { |word| decode_word(word) }
   decoded_words.join(' ')
 end
+# Morse code dictionary
+MORSE_CODE_DICT = {
+  '.-' => 'A',
+  '-...' => 'B',
+  '-.-.' => 'C',
+  '-..' => 'D',
+  '.' => 'E',
+  '..-.' => 'F',
+  '--.' => 'G',
+  '....' => 'H',
+  '..' => 'I',
+  '.---' => 'J',
+  '-.-' => 'K',
+  '.-..' => 'L',
+  '--' => 'M',
+  '-.' => 'N',
+  '---' => 'O',
+  '.--.' => 'P',
+  '--.-' => 'Q',
+  '.-.' => 'R',
+  '...' => 'S',
+  '-' => 'T',
+  '..-' => 'U',
+  '...-' => 'V',
+  '.--' => 'W',
+  '-..-' => 'X',
+  '-.--' => 'Y',
+  '--..' => 'Z'
+}.freeze
+
+# Here is a method in Ruby that decodes an entire message in Morse code.
+puts decode_char('.-')
+puts decode_char('-...')
+puts decode_word('-- -.--   -. .- -- .')
+puts decode_sentence('-- -.--     -. .- -- .')
+puts decode_sentence('.-    -...  --- -..-    ..-. ..- .-.. .-..    --- ..-.    .-. ..- -... .. . ...')
