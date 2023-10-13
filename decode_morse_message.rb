@@ -36,3 +36,9 @@ def decode_char(morse_code)
 
   morse_code_dict[morse_code] || '[UNKNOWN]'
 end
+
+# Here is a method in Ruby that decodes an entire word in Morse code.
+
+def decode_word(word)
+  word.split.map { |code| MORSE_CODE_DICT[code] }.join
+end
