@@ -42,3 +42,11 @@ end
 def decode_word(word)
   word.split.map { |code| MORSE_CODE_DICT[code] }.join
 end
+
+# Here is a method in Ruby that decodes an entire sentence in Morse code.
+
+def decode_sentence(sentence)
+  words = sentence.split('   ')
+  decoded_words = words.map { |word| decode_word(word) }
+  decoded_words.join(' ')
+end
